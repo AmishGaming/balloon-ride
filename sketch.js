@@ -43,7 +43,6 @@ balloon.scale=balloon.scale-0.01;
 }
 else if(keyDown(DOWN_ARROW)){
 	updateHeight(0,10);
-balloon.addAnimation("hotAirBalloon",balloonImg2)
 balloon.scale=balloon.scale+0.01;
 }
   drawSprites();
