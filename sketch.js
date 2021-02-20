@@ -5,6 +5,7 @@ var  database, position,balloonImg2;
 function setup() {
   createCanvas(1000,600);
   balloon=createSprite(100, 400, 50, 50);
+	balloon.addAnimation("hotAirBalloon",balloonImg2)
   database=firebase.database()
   console.log(database)
   var balloonPosition=database.ref('balloon/height')
@@ -21,7 +22,7 @@ balloonImg2=loadAnimation("Hot Air Ballon-04.png","Hot Air Ballon-03.png","Hot A
 function draw() {
   background(backIm); 
 
-balloon.addAnimation(balloonImg)
+balloon.addImage(balloonImg)
 
 fill("blue")
 stroke(2)
@@ -38,7 +39,6 @@ else if(keyDown(RIGHT_ARROW)){
 
 if(keyDown(UP_ARROW)){
 	updateHeight(0,-10);
-balloon.addAnimation("hotAirBalloon",balloonImg2)
 balloon.scale=balloon.scale-0.01;
 }
 else if(keyDown(DOWN_ARROW)){
