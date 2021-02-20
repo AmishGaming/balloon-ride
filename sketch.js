@@ -13,7 +13,7 @@ function setup() {
 
 function preload(){
 backIm=loadImage("Hot Air Ballon-01.png")
-balloonImg=loadImage("Hot Air Ballon-04.png")
+//balloonImg=loadImage("Hot Air Ballon-04.png")
 balloonImg2=loadAnimation("Hot Air Ballon-04.png","Hot Air Ballon-03.png","Hot Air Ballon-02.png")
 
 }
@@ -21,7 +21,7 @@ balloonImg2=loadAnimation("Hot Air Ballon-04.png","Hot Air Ballon-03.png","Hot A
 function draw() {
   background(backIm); 
 
-balloon.addImage(balloonImg)
+balloon.addAnimation(balloonImg2)
 
 fill("blue")
 stroke(2)
